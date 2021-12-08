@@ -1,0 +1,31 @@
+.card{
+    &_image {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 11px;
+    }
+    
+    &_text {
+        font-family: DM Sans;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        height: 52px;
+
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        &_image {
+            margin-bottom: 20px;
+        }
+
+        &_text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.section {
+    margin: 0 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &_title {
+        font-family: DM Sans;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 19px 0 28px;
+    }
+
+    &_cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(113px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 11px;
+    }
+}
+
+@media (min-width: 768px) {
+    .section {
+        margin: 0 73px;
+
+        &_title {
+            font-size: 32px;
+            margin: 68px 0 107px;
+        }
+
+        &_cards {
+            grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+        }
+    }
+}
