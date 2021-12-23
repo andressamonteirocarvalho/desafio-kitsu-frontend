@@ -1,10 +1,5 @@
 import styles from "./styles.module.scss";
-
-interface CardProps {
-  title: string;
-  image: string;
-  onClick: () => void;
-}
+import {CardProps} from "../../types";
 
 export function Card(props: CardProps) {
   return (

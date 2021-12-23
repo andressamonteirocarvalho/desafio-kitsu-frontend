@@ -1,18 +1,7 @@
 import styles from "./styles.module.scss";
 import { ReactComponent as Heart } from "../../assets/heart.svg";
 import estrela from "../../assets/estrela.svg";
-
-interface ModalProps {
-  item: {
-    image: string;
-    title: string;
-    rating: number;
-    chapters: number;
-    sinopse: string;
-    rank: number;
-  };
-  onClick: () => void;
-}
+import {ModalProps} from "../../types";
 
 export function Modal(props: ModalProps) {
   return (
@@ -29,7 +18,6 @@ export function Modal(props: ModalProps) {
             <Heart className={styles.modal_heart} />
           </div>
           <span className={styles.modal_position}>
-            {" "}
             Posição: {props.item.rank}
           </span>
           <span className={styles.modal_rating}>
@@ -43,9 +31,8 @@ export function Modal(props: ModalProps) {
           <p className={styles.modal_sinopse_text}>{props.item.sinopse}</p>
           <button
             className={styles.modal_button}
-            onClick={() => props.onClick()}
+            onClick={() => props.onClose()}
           >
-            {" "}
             x
           </button>
         </div>

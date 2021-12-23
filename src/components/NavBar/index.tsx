@@ -2,13 +2,10 @@ import styles from "./styles.module.scss";
 import logo from "../../assets/firedev.png";
 import heart from "../../assets/heart.svg";
 import buscar from "../../assets/buscar.png";
+import {NavBarProps} from "../../types";
 
-interface NavBarProps {
-  onClick: (type: boolean) => void;
-}
 export function NavBar(props: NavBarProps) {
   return (
-    <>
       <nav className={styles.navbar}>
         <div className={styles.navbar_logo}>
           <img
@@ -45,6 +42,5 @@ export function NavBar(props: NavBarProps) {
           <img className={styles.navbar_heart} src={heart} alt="heart" />
         </div>
       </nav>
-    </>
   );
 }

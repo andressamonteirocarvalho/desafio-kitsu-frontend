@@ -4,15 +4,7 @@ import { Card } from "../Card";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Modal } from "../Modal";
-
-interface AnimeProps {
-  title: string;
-  image: string;
-  rating: number;
-  chapters: number;
-  sinopse: string;
-  rank: number;
-}
+import {AnimeProps} from "../../types";
 
 export function Section() {
   const [anime, setAnime] = useState<AnimeProps[]>([]);
@@ -63,7 +55,7 @@ export function Section() {
           {selectedItem ? (
             <Modal
               item={selectedItem}
-              onClick={() => setSelectedItem(undefined)}
+              onClose={() => setSelectedItem(undefined)}
             />
           ) : null}
         </div>
