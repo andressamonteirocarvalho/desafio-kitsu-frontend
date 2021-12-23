@@ -1,125 +1,166 @@
+.modal_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .modal {
-    width: 350px;
-    height: 270px;
+  width: 350px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  background: #f3f2f2;
+  border-radius: 10px;
+  position: fixed;
+  align-items: center;
+  padding: 15px;
+
+  &_image {
+    width: 170px;
+    height: 208px;
+    border-radius: 2px;
+    margin: 0 12px;
+  }
+
+  &_description {
+    width: 100%;
+  }
+
+  &_description_container {
     display: flex;
-    align-items: center;
-    background: #f3f2f2;
-    border-radius: 10px;
+    justify-content: space-between;
+  }
 
-    &_image {
-        width: 170px;
-        height: 208px;
-        border-radius: 2px;
-        margin: 0 12px;
+  &_modal_description_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+  }
+
+  &_heart {
+    margin-left: 4px;
+    fill: #c41010;
+    height: 35px;
+  }
+
+  &_position {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &_rating {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 8px;
+    color: #000000;
+  }
+
+  &_estrela {
+    height: 10px;
+    margin: 0 6px 0 25px;
+  }
+
+  &_chapters {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 8px;
+    color: #000000;
+  }
+
+  &_sinopse {
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000;
+
+    &_text {
+      font-family: Roboto;
+      font-size: 8px;
+      line-height: 9px;
+      width: 131px;
+      height: 121px;
+      overflow: scroll;
+      color: #000000;
     }
-
-    &_description {
-        width: 100%;
-    }
-
-    &_title {
-        font-weight: bold;
-        font-size: 18px;
-        color: #000000;
-    }
-
-    &_heart {
-        margin-left: 4px;
-        fill: #c41010;
-    }
-
-    &_position {
-        font-family: Roboto;
-        font-weight: 500;
-        font-size: 8px;
-        text-align: center;
-        color: #000000;
-    }
-
-    &_rating {
-        font-family: Roboto;
-        font-weight: 500;
-        font-size: 8px;
-        color: #000000;
-    }
-
-    &_estrela {
-        height: 10px;
-        margin: 0 6px 0 25px;
-    }
-
-    &_chapters {
-        font-family: Roboto;
-        font-weight: 500;
-        font-size: 8px;
-        color: #000000;
-    }
-
-    &_sinopse {
-        font-weight: bold;
-        font-size: 12px;
-        color: #000000;
-
-        &_text {
-            font-family: Roboto;
-            font-size: 8px;
-            line-height: 9px;
-            width: 131px;
-            height: 121px;
-            color: #000000;
-        }
-    }
+  }
+  &_button {
+    position: absolute;
+    left: 353px;
+    top: 7px;
+    height: 10px;
+    background: white;
+    border: none;
+    border-radius: 25%;
+    color: #000000;
+  }
 }
 
 @media (min-width: 768px) {
-    .modal {
-        width: 890px;
-        height: 507px;
-        border-radius: 8px;
+  .modal {
+    width: 890px;
+    height: 507px;
+    border-radius: 8px;
 
-        &_image {
-            width: 317px;
-            height: 420px;
-            border-radius: 4px;
-            margin: 0 38px 0 50px;
-        }
-
-        &_title {
-            font-size: 30px;
-        }
-
-        &_heart {
-            margin-left: 150px;
-            height: 35px;
-            width: 40px;
-        }
-
-        &_position {
-            font-size: 16px;
-        }
-
-        &_rating {
-            font-size: 16px;
-        }
-
-        &_estrela {
-            height: 16px;
-            margin: 0 9px 0 106px;
-        }
-
-        &_chapters {
-            font-size: 16px;
-        }
-
-        &_sinopse {
-            font-size: 20px;
-
-            &_text {
-                font-size: 16px;
-                line-height: 19px;
-                width: 393px;
-                height: 189px;
-            }
-        }
+    &_image {
+      width: 317px;
+      height: 420px;
+      border-radius: 4px;
+      margin: 0 38px 0 50px;
     }
+
+    &_title {
+      font-size: 30px;
+    }
+
+    &_heart {
+      margin-left: 150px;
+      height: 35px;
+      width: 40px;
+    }
+
+    &_position {
+      font-size: 16px;
+    }
+
+    &_rating {
+      font-size: 16px;
+    }
+
+    &_estrela {
+      height: 16px;
+      margin: 0 9px 0 106px;
+    }
+
+    &_chapters {
+      font-size: 16px;
+    }
+
+    &_sinopse {
+      font-size: 20px;
+
+      &_text {
+        font-size: 16px;
+        line-height: 19px;
+        width: 393px;
+        height: 189px;
+      }
+    }
+
+    &_button {
+      left: 887px;
+      height: 19px;
+    }
+  }
 }
